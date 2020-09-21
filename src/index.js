@@ -25,6 +25,7 @@ function Square(props) {
       );
     }
   
+    render() {
       return (
         <div>
           <div className="board-row">
