@@ -8,8 +8,7 @@ function Square(props) {
         <button className="square"
         onClick={props.onClick}>
 
-          {this.state.value}
-          {console.log(this.state.value)}
+          {props.value}
         </button>
       );
     }
@@ -51,7 +50,6 @@ function Square(props) {
   
       return (
         <div>
-          <div className="status">{status}</div>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
