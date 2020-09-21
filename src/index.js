@@ -3,26 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 class Square extends React.Component {
+
+    constructor(props) {
+      super(props);
+      this.state = {
+        value: null,
+      };
+    }
     render() {
       return (
-        <button className="square"onClick={() => alert('click') }>
-           {/* ES6/ES2015 introduced arrow functions, which are nice 
-                when working with inline functions, as parameters or callbacks:
-                the previous syntax:
-                   const dosomething = function dosomething(foo) {
-                            // do something
-                            }
-                can now be written using arrow syntax as:
-                
-                const dosomething = foo => {
-                            //do something
-                            }
-            In the code for this button, notice how with onClick={() => alert('click')}, 
-            we’re passing a function - alert('click') - as the onClick prop. 
-            React will only call this function after a click.
-                 */ }
-          {this.props.value}
-          {console.log(this.props.value)}
+        <button className="square"
+        onClick={() => this.setState({value: 'X'}) }>
+
+          {this.state.value}
+          {console.log(this.state.value)}
         </button>
       );
     }
